@@ -118,7 +118,6 @@ namespace PI {
         setMotorSpeed(MotorList.M2, -speed)
     }
 
-    //% weight=84
     //% blockId=followLine  block="follow line set to %boo with speed %speed and turning speed %tspeed"
     //% speed.min=0 speed.max=100
     export function followLine(boo: Boo, speed: number, tspeed: number): void {
@@ -134,7 +133,7 @@ namespace PI {
         }
     }
 
-    //% weight=83
+    //% weight=84
     //% blockId=sonar_ping block="ping trig %trig echo %echo"
     export function ping(trig: DigitalPin, echo: DigitalPin, maxCmDistance = 20): number {
         pins.setPull(trig, PinPullMode.PullNone);
@@ -149,7 +148,7 @@ namespace PI {
         return Math.idiv(d, 58);
     }
 
-    //% weight=82
+    //% weight=83
     //% blockId=setServoAngle block="Set %servoType servo %servo angle to %angle"
     //% angle.min=0 angle.max=360
     export function setServoAngle(servoType: ServoTypeList, servo: ServoList, angle: number): void {
